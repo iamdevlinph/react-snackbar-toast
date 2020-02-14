@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="V6---Zeplin-ready" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="30.-Email-sent" transform="translate(-24.000000, -537.000000)">
+            <g id="Snackbar-/-Text-only-/-Single-line" transform="translate(8.000000, 520.000000)">
+                <g id="Group-9">
+                    <g id="Group" transform="translate(16.000000, 17.000000)">
+                        <g id="Group-6">
+                            <circle id="Oval" fill="#26A541" cx="8" cy="8" r="8"></circle>
+                            <path d="M4.13377854,8.48395231 C3.93784869,8.28802246 3.93092748,7.97727863 4.13373982,7.77446628 L4.29641021,7.61179589 C4.49231868,7.41588743 4.81082662,7.41632017 5.00789532,7.61283993 L6.51487065,9.11561756 C6.71190457,9.31210263 7.02782955,9.31518781 7.22448945,9.11852792 L11.2133658,5.12965159 C11.4082435,4.93477386 11.7181344,4.92978295 11.9209468,5.13403368 L12.0836172,5.29785776 C12.2795256,5.49515564 12.2777435,5.81569451 12.0901182,6.00331974 L7.21985467,10.8735833 C7.02753666,11.0659013 6.71401709,11.0641909 6.51686974,10.8670435 L4.13377854,8.48395231 Z" id="Shape-Copy-14" stroke="#FFFFFF" stroke-width="0.5" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
