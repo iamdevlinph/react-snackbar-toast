@@ -1,6 +1,6 @@
 {
     "name": "react-snackbar-toast",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "Snackbar/Toast Component for react",
     "main": "./dist/Snackbar.js",
     "license": "MIT",

@@ -56,4 +56,9 @@
       opacity: 0;
     }
   }
+  .verticleMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
