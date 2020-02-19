@@ -54,7 +54,7 @@ export default function SomeChildComponent() {
 These methods are are returned from useSnackbar() hook in array destructuring syntax:
 
 ```
-const [addToast, removeToast] = useSnackbar()
+const {addToast, removeToast} = useSnackbar()
 ```
 
 ### addToast(node, [options])
