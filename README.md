@@ -1,6 +1,6 @@
 # React snackbar/toast component
 
-##Installation
+## Installation
 
 ```
 npm install --save react-snackbar-toast
@@ -12,7 +12,7 @@ or
 yard add react-snackbar-toast
 ```
 
-##Usage
+## Usage
 
 Wrap your application with SnackbarProvider
 
