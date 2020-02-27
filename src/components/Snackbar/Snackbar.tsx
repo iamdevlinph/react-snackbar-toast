@@ -36,7 +36,8 @@ const SnackBarMessage = ({
 }: SnackBarMessageProp) => {
   var classes = classNames({
     [styles.message]: true,
-    [styles.success]: options.type === 'success'
+    [styles.success]: options.type === 'success',
+    [options.className]: options.className
   });
 
   useEffect(() => {

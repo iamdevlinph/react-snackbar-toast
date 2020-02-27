@@ -1,6 +1,6 @@
 {
     "name": "react-snackbar-toast",
-    "version": "0.4.2",
+    "version": "1.2.0",
     "description": "Snackbar/Toast Component for react",
     "main": "./dist/Snackbar.js",
     "license": "MIT",
@@ -16,7 +16,8 @@
         "alert",
         "notification",
         "message",
-        "toast"
+        "toast",
+        "reactjs"
     ],
     "scripts": {
         "build": "rm -rf ./dist  && webpack"
@@ -24,6 +25,10 @@
     "peerDependencies": {
         "react": "16.x",
         "react-dom": "16.x"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/avinash-ganiga/react-snackbar-toast"
     },
     "devDependencies": {
         "@babel/core": "^7.8.4",

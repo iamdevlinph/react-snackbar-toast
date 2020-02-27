@@ -1,5 +1,5 @@
 # React snackbar/toast component
-
+Find demo [here](https://codesandbox.io/s/recursing-flower-0xrvz?fontsize=14&hidenavigation=1&theme=dark)
 ## Installation
 
 ```
@@ -51,10 +51,36 @@ export default function SomeChildComponent() {
 }
 ```
 
+if you are having class component then wrap your component withSnackbar()
+
+```
+import React from 'react'
+import { withSnackbar } from 'react-snackbar-toast'
+ 
+class SomeComponent extends React.Component {
+  render() {
+    const { addToast, removeAllToast } = this.props
+ 
+    return (
+      <div>
+        <button onClick={() => addToast('This is the content of the Snackbar.')}>
+          Click here to open the Snackbar.
+        </button>
+        <button onClick={removeAllToast}>
+          Click here to remove all snackbars.
+        </button>
+      </div>
+    )
+  }
+}
+export default withSnackbar(SomeComponent)
+
+```
+
 These methods are are returned from useSnackbar() hook in array destructuring syntax:
 
 ```
-const {addToast, removeToast} = useSnackbar()
+const {addToast, removeToast, removeAllToast} = useSnackbar()
 ```
 
 ### addToast(node, [options])
@@ -73,6 +99,16 @@ Remove the particular snackbar with returned id from addToast.
     let toastId = addToast('Hey', {autoDismiss: false});
     removeToast(toastId)
 ```
+
+### removeAllToast()
+
+Remove all active snackbars.
+
+```
+    addToast('Hey', {autoDismiss: false});
+    addToast('Hey', {autoDismiss: false});
+    removeAllToast()
+```
     
 
 ## Options
@@ -90,9 +126,12 @@ Options object can be passed to customize the Snackbar. This option can be passe
 
     type: Two types 'success' and 'error'.
           addToast('Hey', {autoDismiss: false, type: 'success'})
+
+    className: adds the custom className to snackbar.
+          addToast('Hey', {className: 'customClass'})
           
     component: We can custom component for snackabr.
                 addToast(<somecomponent/>)
     retry: To show retry button in snackbar.
-            addToast('something wrong',, {autoDismiss: false, type: 'error', retry: () => {//do retry here}} )
+            addToast('something wrong', {autoDismiss: false, type: 'error', retry: () => {//do retry here}} )
 

@@ -40,10 +40,21 @@ const SnackbarProvider = (props: { children: ReactNode }) => {
     });
   };
 
+  //remove all active toast
+  const removeAll = () => {
+    setState(curState => {
+      return {
+        ...curState,
+        toasts: []
+      };
+    });
+  };
+
   let [state, setState] = useState({
     toasts: [],
     add: add,
     remove: remove,
+    removeAll: removeAll,
     idCounter: 0
   });
 

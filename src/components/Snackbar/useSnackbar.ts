@@ -9,6 +9,7 @@ const useSnackBar = () => {
     toasts: SnackBar.toasts,
     addToast: SnackBar.add,
     removeToast: SnackBar.remove,
+    removeAllToast: SnackBar.removeAll,
     id: SnackBar.idCounter
   };
 };

@@ -9,6 +9,7 @@ export interface SnackBarType {
   add: Function;
   remove: Function;
   idCounter: number;
+  removeAll: Function;
 }
 
 export interface SnackBarProp {
@@ -34,4 +35,5 @@ export interface ToastOptionsType {
   component?: object;
   icon?: string;
   type?: string;
+  className: any;
 }
