@@ -2,6 +2,7 @@ import React from 'react';
 let styles = require('./Image.css');
 import snackbarTick from '../../assets/images/snackbar_tick.svg';
 import errorIcon from '../../assets/images/error-icon.png';
+import closeIcon from '../../assets/images/close.png';
 
 const noop =  () => {} 
 
@@ -11,7 +12,8 @@ type iconsTypes = {
 
 let icons: iconsTypes = {
   snackbarTick: snackbarTick,
-  errorIcon: errorIcon
+  errorIcon: errorIcon,
+  closeIcon: closeIcon
 };
 
 export interface IProps {

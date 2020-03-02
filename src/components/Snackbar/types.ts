@@ -35,5 +35,7 @@ export interface ToastOptionsType {
   component?: object;
   icon?: string;
   type?: string;
-  className: any;
+  className?: any;
+  closeButton?: boolean;
+  closeIcon?: string
 }

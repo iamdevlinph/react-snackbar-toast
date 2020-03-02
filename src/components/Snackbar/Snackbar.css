@@ -21,8 +21,8 @@
       margin-right: 8px;
       width: 18px;
       flex-shrink: 0;
-      top: -1px;
-      position: relative;
+      align-self: center;
+
     }
     .text {
       flex: 1;
@@ -35,6 +35,11 @@
       color: $amber;
       align-self: center;
       letter-spacing: 0.67px;
+    }
+    .close{
+      align-self: center;
+      width: 20px;
+      flex-shrink: 0;
     }
   }
 }
@@ -55,10 +60,5 @@
       transform: scale(0);
       opacity: 0;
     }
-  }
-  .verticleMiddle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 }

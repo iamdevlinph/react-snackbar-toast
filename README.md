@@ -38,7 +38,7 @@ Then you can use useSnackbar() hook on any descendant functional component:
 import React from 'react'
 import useSnackbar from 'react-snackbar-toast'
 
-export default function SomeChildComponent() {
+export default function MessageComponent() {
   const {addToast} = useSnackbar()
 
   return (
@@ -115,23 +115,30 @@ Remove all active snackbars.
 
 Options object can be passed to customize the Snackbar. This option can be passed with useSnackbar(node, options):
 
-    autoDismissTime: Used to give auto dismissal time for snackbar. By Default it is 3000ms.
+    autoDismissTime:(number) Used to give auto dismissal time for snackbar. By Default it is 3000ms.
                     addToast('Hey', {autoDismissTime: 10000});
 
-    autoDismiss: To disable auto dismissal of snackbar.
+    autoDismiss:(Boolean) To disable auto dismissal of snackbar.
                  addToast('Hey', {autoDismiss: false});
 
-    icon: To provide custom icon for snackbar. 
+    icon:(string) To provide custom icon for snackbar. 
           addToast('Hey', {icon: 'http://www.img.com/img});
 
-    type: Two types 'success' and 'error'.
+    type:(string) Two types 'success' and 'error'.
           addToast('Hey', {autoDismiss: false, type: 'success'})
 
-    className: adds the custom className to snackbar.
+    className:(string) adds the custom className to snackbar.
           addToast('Hey', {className: 'customClass'})
+
+    closeButton:(Boolean) adds the close button to snackbar.
+          addToast('Hey', {closeButton: true})
+
+    closeIcon:(string) To provide custom icon to close button.
+          addToast('Hey, How are you today?', {closeButton: true, closeIcon: 'http://www.img.com/img});
           
-    component: We can custom component for snackabr.
+    component:(ReactNode) We can custom component for snackabr.
                 addToast(<somecomponent/>)
-    retry: To show retry button in snackbar.
+
+    retry:(Function) To show retry button in snackbar.
             addToast('something wrong', {autoDismiss: false, type: 'error', retry: () => {//do retry here}} )
 

@@ -22,7 +22,7 @@ const Icon = ({ type, icon }: IconTypeProp) => {
     return null;
   }
   return (
-    <div className={styles.icon + ' verticleMiddle'}>
+    <div className={styles.icon}>
       <Image src={icon} />
     </div>
   );
@@ -71,6 +71,11 @@ const SnackBarMessage = ({
           {options.retry && (
             <div className={styles.retry} onClick={retry}>
               Retry
+            </div>
+          )}
+          {options.closeButton && (
+            <div className={styles.close} onClick={() => dismiss(id)}>
+              <Image src={ options.closeIcon || 'closeIcon' } />
             </div>
           )}
         </React.Fragment>
