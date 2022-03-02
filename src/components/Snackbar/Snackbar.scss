@@ -1,4 +1,4 @@
-@import '../../variables.css';
+@import "../../variables.scss";
 .toast {
   position: fixed;
   bottom: 0;
@@ -22,7 +22,6 @@
       width: 18px;
       flex-shrink: 0;
       align-self: center;
-
     }
     .text {
       flex: 1;
@@ -36,10 +35,11 @@
       align-self: center;
       letter-spacing: 0.67px;
     }
-    .close{
+    .close {
       align-self: center;
       width: 20px;
       flex-shrink: 0;
+      cursor: pointer;
     }
   }
 }

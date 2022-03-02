@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import classNames from 'classnames';
-import Image from '../Image/Image';
-import { SnackBarProp, SnackBarMessageProp, IconTypeProp } from './types';
-let styles = require('./SnackBar.css');
+import React, { useEffect } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import classNames from "classnames";
+import Image from "../Image/Image";
+import { SnackBarProp, SnackBarMessageProp, IconTypeProp } from "./types";
+let styles = require("./SnackBar.scss");
 
 const Icon = ({ type, icon }: IconTypeProp) => {
   const getIcon = (iconType?: string) => {
     switch (iconType) {
-      case 'success':
-        return 'snackbarTick';
-      case 'error':
-        return 'errorIcon';
+      case "success":
+        return "snackbarTick";
+      case "error":
+        return "errorIcon";
       default:
         return undefined;
     }
@@ -36,7 +36,7 @@ const SnackBarMessage = ({
 }: SnackBarMessageProp) => {
   var classes = classNames({
     [styles.message]: true,
-    [styles.success]: options.type === 'success',
+    [styles.success]: options.type === "success",
     [options.className]: options.className
   });
 
@@ -75,7 +75,7 @@ const SnackBarMessage = ({
           )}
           {options.closeButton && (
             <div className={styles.close} onClick={() => dismiss(id)}>
-              <Image src={ options.closeIcon || 'closeIcon' } />
+              <Image src={options.closeIcon || "closeIcon"} />
             </div>
           )}
         </React.Fragment>
@@ -85,23 +85,27 @@ const SnackBarMessage = ({
 };
 
 const Snackbar = ({ toasts, dismiss }: SnackBarProp) => {
+  const nodeRef = React.useRef<HTMLDivElement>(null);
   return (
-    <TransitionGroup className={styles.toast + ' fkToastMessage'}>
-      {toasts.map((toast) => {
+    <TransitionGroup className={styles.toast + " fkToastMessage"}>
+      {toasts.map(toast => {
         return (
           <CSSTransition
+            nodeRef={nodeRef}
             classNames="fkToastMessage"
             key={toast.id}
             mountOnEnter
             timeout={400}
             unmountOnExit
           >
-            <SnackBarMessage
-              toast={toast}
-              dismiss={dismiss}
-              id={toast.id}
-              options={toast.options}
-            ></SnackBarMessage>
+            <div ref={nodeRef}>
+              <SnackBarMessage
+                toast={toast}
+                dismiss={dismiss}
+                id={toast.id}
+                options={toast.options}
+              />
+            </div>
           </CSSTransition>
         );
       })}

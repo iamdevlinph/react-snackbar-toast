@@ -1,10 +1,11 @@
 import React from 'react';
-let styles = require('./Image.css');
+import cn from 'classnames';
+let styles = require('./Image.scss');
 import snackbarTick from '../../assets/images/snackbar_tick.svg';
 import errorIcon from '../../assets/images/error-icon.png';
 import closeIcon from '../../assets/images/close.png';
 
-const noop =  () => {} 
+const noop = () => { }
 
 type iconsTypes = {
   [key: string]: string;
@@ -22,25 +23,15 @@ export interface IProps {
   className?: string;
   onClick?: Function;
 }
-//you can pass actual image path or icon type as src parameter to this component
+//pass actual image path or icon type as src prop
 const Image = ({ src, alt, className, onClick = noop }: IProps) => {
-  console.log(icons[src], icons, src)
-  if (icons[src]) {
-    return (
-      <img
-        src={icons[src]}
-        alt={alt}
-        className={styles.image + ' ' + className}
-        onClick={() => onClick()}
-      />
-    );
-  }
+  const imgSrc = icons[src] || src;
 
   return (
     <img
-      src={src}
+      src={imgSrc}
       alt={alt}
-      className={styles.image + ' ' + className}
+      className={cn(styles.image, className)}
       onClick={event => onClick(event)}
     />
   );

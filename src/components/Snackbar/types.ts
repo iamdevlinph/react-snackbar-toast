@@ -6,10 +6,7 @@ export interface ToastType {
 
 export interface SnackBarType {
   toasts: Array<ToastType>;
-  add: Function;
-  remove: Function;
-  idCounter: number;
-  removeAll: Function;
+  id: number;
 }
 
 export interface SnackBarProp {
@@ -37,5 +34,5 @@ export interface ToastOptionsType {
   type?: string;
   className?: any;
   closeButton?: boolean;
-  closeIcon?: string
+  closeIcon?: string;
 }
