@@ -34,5 +34,5 @@ export interface ToastOptionsType {
   type?: string;
   className?: any;
   closeButton?: boolean;
-  closeIcon?: string;
+  closeIcon?: string | Element;
 }

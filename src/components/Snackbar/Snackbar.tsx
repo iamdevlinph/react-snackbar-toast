@@ -75,7 +75,7 @@ const SnackBarMessage = ({
           )}
           {options.closeButton && (
             <div className={styles.close} onClick={() => dismiss(id)}>
-              <Image src={options.closeIcon || "closeIcon"} />
+              {React.isValidElement(options.closeIcon) ? options.closeIcon ? <Image src={options.closeIcon || "closeIcon"} />}
             </div>
           )}
         </React.Fragment>
