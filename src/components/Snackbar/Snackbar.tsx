@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import classNames from "classnames";
 import Image from "../Image/Image";
 import { SnackBarProp, SnackBarMessageProp, IconTypeProp } from "./types";
-let styles = require("./SnackBar.scss");
+let styles = require("./Snackbar.scss");
 
 const Icon = ({ type, icon }: IconTypeProp) => {
   const getIcon = (iconType?: string) => {
