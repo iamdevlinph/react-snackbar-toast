@@ -32,12 +32,12 @@ const SnackBarMessage = ({
   toast,
   id,
   options,
-  dismiss
+  dismiss,
 }: SnackBarMessageProp) => {
   var classes = classNames({
     [styles.message]: true,
     [styles.success]: options.type === "success",
-    [options.className]: options.className
+    [options.className]: options.className,
   });
 
   useEffect(() => {
@@ -75,7 +75,11 @@ const SnackBarMessage = ({
           )}
           {options.closeButton && (
             <div className={styles.close} onClick={() => dismiss(id)}>
-              {React.isValidElement(options.closeIcon) ? options.closeIcon ? <Image src={options.closeIcon || "closeIcon"} />}
+              {React.isValidElement(options.closeIcon) ? (
+                options.closeIcon
+              ) : (
+                <Image src={options.closeIcon || "closeIcon"} />
+              )}
             </div>
           )}
         </React.Fragment>
@@ -88,7 +92,7 @@ const Snackbar = ({ toasts, dismiss }: SnackBarProp) => {
   const nodeRef = React.useRef<HTMLDivElement>(null);
   return (
     <TransitionGroup className={styles.toast + " fkToastMessage"}>
-      {toasts.map(toast => {
+      {toasts.map((toast) => {
         return (
           <CSSTransition
             nodeRef={nodeRef}
